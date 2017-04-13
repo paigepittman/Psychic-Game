@@ -1,8 +1,25 @@
+body {
+
+	background-color: #C8A4FD;
+}
+
 h1 {
 	text-align: center;
 
 }
 
+h2{
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
 h4 {
+	text-align: center;
+}
+
+.guesses {
 	text-align: center;
 }

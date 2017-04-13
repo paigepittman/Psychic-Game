@@ -1,15 +1,25 @@
 var pastGuesses = [];
+
 var wins = 0;
+
 var losses = 0;
+
 var guess = "";
+
 var	choice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var comp = "";
+
+var comp = choice[Math.floor(Math.random() * choice.length)];
+
 var guessesLeft = 5;
 
-//computer chooses random letter
-function start() {
-comp = choice[Math.floor(Math.random() * choice.length)];
+var random = "";
 
+//Game Start: comp chooses random letter, wins, guesses, losses displayed
+function start() {
+comp;
+document.getElementById("wins").innerHTML = wins;
+document.getElementById("guessesLeft").innerHTML = guessesLeft;
+document.getElementById("losses").innerHTML = losses;
 
 }
 
@@ -21,25 +31,41 @@ document.onkeyup = function() {
 	if (pastGuesses.indexOf(guess) === -1) {
 		
 		pastGuesses.push(guess);
+
+		document.getElementById("guesses").innerHTML = pastGuesses;
 		//if key is correct, wins go up, game resets
 		if (guess === comp) {
+
 			wins++;
+
+			document.getElementById("wins").innerHTML = wins;
+			document.getElementById("message").innerHTML = "I see a bright future for you!";
+
 			reset();
 		}
 		//if key is incorrect and user still has guesses, guesses goes down
 		else if (guessesLeft > 1) {
+
 			guessesLeft--;
+
+			document.getElementById("guessesLeft").innerHTML = guessesLeft;
+
 		}
 
 		//if no guesses remain, losses goes up and game resets
 		else {
+
 			losses++;
+
+			document.getElementById("losses").innerHTML = losses;
+			document.getElementById("message").innerHTML = "Looks like you don't have the Seeing Eye";
+
 			reset();
 		}
 
 
 	} 
-console.log("comp: ",comp);
+console.log(comp);
 console.log("guess: ", guess);
 console.log("wins:", wins);
 console.log("losses: ",losses);
@@ -55,4 +81,7 @@ function reset() {
 	start();
 
 }
+
+
+
 
