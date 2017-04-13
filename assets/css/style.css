@@ -27,6 +27,7 @@ body {
 	padding-top: 60px;
 	padding-left: 11px;
 	text-align: center;
+	font-size: 40px;
 	
 	
 	
@@ -45,7 +46,6 @@ body {
 	position: fixed;
 	top: 300px;
 	left: 40%;
-	font-size: 40px;
 	text-align: center;
 
 
