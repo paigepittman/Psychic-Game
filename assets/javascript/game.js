@@ -21,6 +21,10 @@ document.getElementById("wins").innerHTML = wins;
 document.getElementById("guessesLeft").innerHTML = guessesLeft;
 document.getElementById("losses").innerHTML = losses;
 
+
+
+
+
 }
 
 //key is pressed
@@ -39,6 +43,7 @@ document.onkeyup = function() {
 			wins++;
 
 			document.getElementById("wins").innerHTML = wins;
+			
 			document.getElementById("message").innerHTML = "I see a bright future for you!";
 
 			reset();
@@ -58,9 +63,14 @@ document.onkeyup = function() {
 			losses++;
 
 			document.getElementById("losses").innerHTML = losses;
+			
 			document.getElementById("message").innerHTML = "Looks like you don't have the Seeing Eye";
 
-			reset();
+			document.getElementById("image").innerHTML = comp;
+
+
+
+			
 		}
 
 
@@ -78,6 +88,7 @@ console.log("guesses left: ", guessesLeft);
 function reset() {
 	guessesLeft = 5;
 	pastGuesses = [];
+	
 	start();
 
 }

@@ -1,25 +1,52 @@
 body {
-
+	text-align: center;
+	color: white;
 	background-color: #C8A4FD;
+	
 }
 
-h1 {
-	text-align: center;
 
-}
-
-h2{
-	text-align: center;
-}
-
-h3 {
-	text-align: center;
-}
-
-h4 {
-	text-align: center;
-}
 
 .guesses {
 	text-align: center;
+	margin-top: -10px;
+}
+
+.message {
+	z-index: 1;
+	margin-top: -10px;
+	padding-bottom: 10px;
+
+}
+
+#image {
+	background-image: url("https://github.com/paigepittman/Psychic-Game/blob/master/assets/images/orb-png-11.png?raw=true");
+	height: 200px;
+	width: 200px;
+	background-size: 200px;
+	padding-top: 60px;
+	padding-left: 11px;
+	text-align: center;
+	
+	
+	
+	
+}
+
+.left, .right {
+	height: 200px;
+
+	min-width: 0px;
+}
+
+.ball {
+	height: 200px;
+	min-width: 200px;
+	position: fixed;
+	top: 300px;
+	left: 40%;
+	font-size: 40px;
+	text-align: center;
+
+
 }
